@@ -28,10 +28,24 @@ class Third extends Second{
     return "Class 3";
   }
 }
+
+$firstClass =  new First();
+$firstClassText = $firstClass->writeText();
+$firstClassWholeText = $firstClass->wholeText();
+$secondClass =  new Second();
+$secondClassText = $secondClass->writeText();
+$secondClassWholeText = $secondClass->wholeText();
+$thirdClass =  new Third();
+$thirdClassText = $thirdClass->writeText();
+$thirdClassWholeText = $thirdClass->wholeText();
+
 $info = [
-  ['name' => new First()->writeText()],
-  ['name' => 'Second item'],
-  ['name' => 'Third item'],
+  ['name' => $firstClassText],
+  ['name' => $firstClassWholeText],
+  ['name' => $secondClassText],
+  ['name' => $secondClassWholeText],
+  ['name' => $thirdClassText],
+  ['name' => $thirdClassWholeText],
 ];
 
 // Render our view
